@@ -1,6 +1,6 @@
 #!/bin/bash
 #Location=
-SUSEConnect -r 30CC0C89D7E9C8 -e vidya@cloudalliancepartners.com
+SUSEConnect -r 321B7822C6A0357F -e psssuser5@gmail.com
 echo 'root:demoPassword1!' | chpasswd
 zypper update -y
 if [ "$Location" = southindia ]; then
@@ -17,6 +17,8 @@ elif [ "$Location" = southeastasia ]; then
     mount -t cifs //softwaresilt.file.core.windows.net/software /home/dbadmin/software -o vers=3.0,username=softwaresilt,password=H5tUmravg0/jEOg6p9RRHOQ6i0aHEEPtcglggRJXc/x5nthYdR4Isi4pL4OvoMFSiddAzKi7RbuRExW1L5HoPw==,dir_mode=0777,file_mode=0777,sec=ntlmssp
 elif [ "$Location" = westus2 ]; then
     mount -t cifs //softwarewus.file.core.windows.net/softwarewus2 /home/dbadmin/software -o vers=3.0,username=softwarewus,password=y31E0viKAjBCFXJEoVQmh7PJS6026fQsNOkDY+RRKPHp4kR5O8y0S1bvqxJMsoqMQU3c5aDcmp0FJTAJ9erJrg==,dir_mode=0777,file_mode=0777,sec=ntlmssp
+elif [ "$Location" = japaneast ]; then
+    mount -t cifs //softwareje.file.core.windows.net/softwareje    /home/dbadmin/software -o vers=3.0,username=softwareje,password=zh/iMHvu01gOOE8fMgxARsTVCmxzpqFtQ+9VhMFYhx9bi1i1ytAnwC0QMWdOHjfzbLr2lK/hJTNYhsB23cSuvQ==,dir_mode=0777,file_mode=0777,sec=ntlmssp
 else
     printf '%s\n' "## Region mismatch - Talk to us please ##"
 fi
